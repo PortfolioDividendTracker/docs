@@ -1,33 +1,30 @@
 ---
 title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+description: 'Portfolio Dividend Tracker REST API reference'
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+## Overview
 
-## Welcome
+The Portfolio Dividend Tracker API provides programmatic access to your portfolio data, transactions, dividends, and more through a RESTful interface.
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
-
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+Base URL: `https://staging.portfoliodividendtracker.com/api/v1`
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+The API uses **OAuth2 Authorization Code with PKCE** for authentication. All API endpoints require a valid Bearer token.
 
 ```json
 "security": [
   {
-    "bearerAuth": []
+    "oauth2": ["read", "write"]
   }
 ]
 ```
+
+<Note>
+  LLM Agents can fetch `/.well-known/oauth-authorization-server` to discover OAuth endpoints and dynamically register clients via the registration endpoint.
+</Note>
+
+## Rate Limiting
+
+API requests are limited to **250 requests per minute** per authenticated user.

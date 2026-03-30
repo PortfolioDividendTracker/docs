@@ -1,13 +1,14 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Portfolio Dividend Tracker",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
+  "openapi": "api-reference/openapi.json",
   "navigation": {
     "tabs": [
       {
@@ -48,21 +49,173 @@
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "API Reference",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Overview",
             "pages": [
               "api-reference/introduction"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Authentication",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference/endpoint/oauthAuthorize",
+              "api-reference/endpoint/oauthToken"
+            ]
+          },
+          {
+            "group": "Authorizations",
+            "pages": [
+              "api-reference/endpoint/authorization.listAuthorizationsEndpoint",
+              "api-reference/endpoint/authorization.getAuthorizationEndpoint",
+              "api-reference/endpoint/authorization.revokeAuthorizationEndpoint",
+              "api-reference/endpoint/authorization.revokeAuthorizationTokenEndpoint"
+            ]
+          },
+          {
+            "group": "User Profile",
+            "pages": [
+              "api-reference/endpoint/user.getUserProfileEndpoint"
+            ]
+          },
+          {
+            "group": "Portfolio",
+            "pages": [
+              "api-reference/endpoint/portfolio.getPortfolioEndpoint",
+              "api-reference/endpoint/portfolio.getPortfolioHoldingsEndpoint",
+              "api-reference/endpoint/portfolio.listPortfoliosEndpoint"
+            ]
+          },
+          {
+            "group": "Performance",
+            "pages": [
+              "api-reference/endpoint/portfolio.getPortfolioPerformanceEndpoint",
+              "api-reference/endpoint/portfolio.getPortfolioPerformanceChartEndpoint"
+            ]
+          },
+          {
+            "group": "Gains",
+            "pages": [
+              "api-reference/endpoint/portfolio.getPortfolioGainsEndpoint"
+            ]
+          },
+          {
+            "group": "Distributions",
+            "pages": [
+              "api-reference/endpoint/portfolio.getPortfolioDistributionsEndpoint"
+            ]
+          },
+          {
+            "group": "Transactions",
+            "pages": [
+              "api-reference/endpoint/transaction.listTransactionsEndpoint",
+              "api-reference/endpoint/transaction.createTransactionEndpoint",
+              "api-reference/endpoint/transaction.getTransactionEndpoint",
+              "api-reference/endpoint/transaction.updateTransactionEndpoint",
+              "api-reference/endpoint/transaction.deleteTransactionEndpoint"
+            ]
+          },
+          {
+            "group": "Dividends",
+            "pages": [
+              "api-reference/endpoint/dividend.listDividendsEndpoint",
+              "api-reference/endpoint/dividend.createDividendEndpoint",
+              "api-reference/endpoint/dividend.getDividendEndpoint",
+              "api-reference/endpoint/dividend.updateDividendEndpoint",
+              "api-reference/endpoint/dividend.deleteDividendEndpoint"
+            ]
+          },
+          {
+            "group": "Bookings",
+            "pages": [
+              "api-reference/endpoint/booking.listBookingsEndpoint",
+              "api-reference/endpoint/booking.createBookingEndpoint",
+              "api-reference/endpoint/booking.getBookingEndpoint",
+              "api-reference/endpoint/booking.updateBookingEndpoint",
+              "api-reference/endpoint/booking.deleteBookingEndpoint"
+            ]
+          },
+          {
+            "group": "Expenses",
+            "pages": [
+              "api-reference/endpoint/expense.listExpensesEndpoint",
+              "api-reference/endpoint/expense.createExpenseEndpoint",
+              "api-reference/endpoint/expense.getExpenseEndpoint",
+              "api-reference/endpoint/expense.updateExpenseEndpoint",
+              "api-reference/endpoint/expense.deleteExpenseEndpoint"
+            ]
+          },
+          {
+            "group": "Imports",
+            "pages": [
+              "api-reference/endpoint/import.listImportsEndpoint",
+              "api-reference/endpoint/import.createImportEndpoint",
+              "api-reference/endpoint/import.getImportEndpoint"
+            ]
+          },
+          {
+            "group": "Investment Strategies",
+            "pages": [
+              "api-reference/endpoint/investmentStrategy.listInvestmentStrategiesEndpoint",
+              "api-reference/endpoint/investmentStrategy.createInvestmentStrategyEndpoint",
+              "api-reference/endpoint/investmentStrategy.getInvestmentStrategyEndpoint",
+              "api-reference/endpoint/investmentStrategy.updateInvestmentStrategyEndpoint",
+              "api-reference/endpoint/investmentStrategy.deleteInvestmentStrategyEndpoint",
+              "api-reference/endpoint/investmentStrategy.linkSymbolsToStrategiesEndpoint"
+            ]
+          },
+          {
+            "group": "Calendar Events",
+            "pages": [
+              "api-reference/endpoint/calendarEvent.listCalendarEventsEndpoint"
+            ]
+          },
+          {
+            "group": "Corporate Actions",
+            "pages": [
+              "api-reference/endpoint/corporateAction.listCorporateActionsEndpoint"
+            ]
+          },
+          {
+            "group": "X-Ray",
+            "pages": [
+              "api-reference/endpoint/xRay.listXRayHoldingsEndpoint"
+            ]
+          },
+          {
+            "group": "Symbols",
+            "pages": [
+              "api-reference/endpoint/symbol.searchSymbolsEndpoint",
+              "api-reference/endpoint/symbol.getSymbolEndpoint",
+              "api-reference/endpoint/symbol.listSymbolQuotesEndpoint",
+              "api-reference/endpoint/symbol.getSymbolQuoteEndpoint"
+            ]
+          },
+          {
+            "group": "Prices",
+            "pages": [
+              "api-reference/endpoint/price.listPricesEndpoint",
+              "api-reference/endpoint/price.batchListPricesEndpoint"
+            ]
+          },
+          {
+            "group": "Brokers",
+            "pages": [
+              "api-reference/endpoint/broker.listBrokersEndpoint",
+              "api-reference/endpoint/broker.getBrokerEndpoint"
+            ]
+          },
+          {
+            "group": "Exchange Rates",
+            "pages": [
+              "api-reference/endpoint/exchangeRate.listExchangeRatesEndpoint"
+            ]
+          },
+          {
+            "group": "Changelog",
+            "pages": [
+              "api-reference/endpoint/changelog.listApiChangelogEndpoint"
             ]
           }
         ]
